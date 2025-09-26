@@ -1,0 +1,148 @@
+{
+  "model_info": {
+    "name": "Gradient Boosting",
+    "type": "GradientBoostingRegressor",
+    "training_date": "2025-09-26T19:33:27.828547",
+    "filename": "best_model_gradient_boosting.pkl"
+  },
+  "performance": {
+    "test_r2": 0.9622197614108514,
+    "test_rmse": 350259.2324134377,
+    "test_mae": 210129.2177835066,
+    "test_mape": 4.472316926049162,
+    "cv_score": 0.9528597106224366
+  },
+  "hyperparameters": {
+    "subsample": 0.9,
+    "n_estimators": 200,
+    "max_features": null,
+    "max_depth": 4,
+    "learning_rate": 0.05
+  },
+  "data_info": {
+    "features_count": 23,
+    "train_samples": 327,
+    "val_samples": 109,
+    "test_samples": 109,
+    "feature_names": [
+      "area",
+      "bedrooms",
+      "bathrooms",
+      "stories",
+      "mainroad",
+      "guestroom",
+      "basement",
+      "hotwaterheating",
+      "airconditioning",
+      "parking",
+      "prefarea",
+      "furnishingstatus",
+      "price_per_sqft",
+      "rooms_total",
+      "area_per_room",
+      "bathroom_bedroom_ratio",
+      "luxury_score",
+      "has_luxury",
+      "area_bedrooms_interaction",
+      "luxury_area_interaction",
+      "size_category_medium",
+      "size_category_small",
+      "size_category_very_large"
+    ],
+    "scaler_used": "RobustScaler"
+  },
+  "feature_importance": [
+    {
+      "feature": "price_per_sqft",
+      "importance": 0.3281243764221595
+    },
+    {
+      "feature": "luxury_area_interaction",
+      "importance": 0.289376554281791
+    },
+    {
+      "feature": "area",
+      "importance": 0.23610117809161107
+    },
+    {
+      "feature": "area_bedrooms_interaction",
+      "importance": 0.12488580740103736
+    },
+    {
+      "feature": "area_per_room",
+      "importance": 0.004869094027109228
+    },
+    {
+      "feature": "rooms_total",
+      "importance": 0.0044318596557488925
+    },
+    {
+      "feature": "parking",
+      "importance": 0.0035975007641366854
+    },
+    {
+      "feature": "stories",
+      "importance": 0.0028097753891508565
+    },
+    {
+      "feature": "size_category_medium",
+      "importance": 0.001623326770924461
+    },
+    {
+      "feature": "furnishingstatus",
+      "importance": 0.0009450993194108451
+    },
+    {
+      "feature": "mainroad",
+      "importance": 0.0007699361901786345
+    },
+    {
+      "feature": "luxury_score",
+      "importance": 0.0005921383438096927
+    },
+    {
+      "feature": "bathroom_bedroom_ratio",
+      "importance": 0.0005584022546200164
+    },
+    {
+      "feature": "guestroom",
+      "importance": 0.0003664679089852824
+    },
+    {
+      "feature": "bedrooms",
+      "importance": 0.00034954917345513843
+    },
+    {
+      "feature": "hotwaterheating",
+      "importance": 0.0003139031598503665
+    },
+    {
+      "feature": "airconditioning",
+      "importance": 7.895670034289835e-05
+    },
+    {
+      "feature": "basement",
+      "importance": 6.336007442664119e-05
+    },
+    {
+      "feature": "bathrooms",
+      "importance": 5.45229810353125e-05
+    },
+    {
+      "feature": "prefarea",
+      "importance": 4.869830665280919e-05
+    },
+    {
+      "feature": "has_luxury",
+      "importance": 2.524531769096331e-05
+    },
+    {
+      "feature": "size_category_very_large",
+      "importance": 7.837552091288596e-06
+    },
+    {
+      "feature": "size_category_small",
+      "importance": 6.409913780888475e-06
+    }
+  ]
+}
