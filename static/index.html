@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 House Price Predictor - Interface de Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🏠 House Price Predictor</h1>
+            <p class="subtitle">Interface de test pour l'API de prédiction des prix immobiliers</p>
+        </header>
+
+        <!-- Status Bar -->
+        <div class="status-bar" id="statusBar">
+            <span class="status-indicator" id="statusIndicator">🔴</span>
+            <span id="statusText">Vérification de la connexion à l'API...</span>
+        </div>
+
+        <div class="main-content">
+            <!-- Input Form -->
+            <div class="card input-section">
+                <h2>📝 Caractéristiques de la Maison</h2>
+                <form id="houseForm">
+                    <!-- Basic Properties -->
+                    <div class="form-section">
+                        <h3>🏗️ Propriétés de Base</h3>
+                        <div class="form-group">
+                            <label for="area">Surface (pieds carrés)</label>
+                            <input type="number" id="area" name="area" value="7420" min="1000" max="20000" required>
+                            <small>Entre 1,000 et 20,000 pieds carrés</small>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bedrooms">Chambres</label>
+                                <select id="bedrooms" name="bedrooms" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4" selected>4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bathrooms">Salles de bain</label>
+                                <select id="bathrooms" name="bathrooms" required>
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="stories">Étages</label>
+                                <select id="stories" name="stories" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3" selected>3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="parking">Places parking</label>
+                                <select id="parking" name="parking" required>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Amenities -->
+                    <div class="form-section">
+                        <h3>✨ Équipements et Commodités</h3>
+                        <div class="checkbox-grid">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="mainroad" name="mainroad" value="1" checked>
+                                <label for="mainroad">🛣️ Route principale</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="guestroom" name="guestroom" value="1">
+                                <label for="guestroom">🛏️ Chambre d'invités</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="basement" name="basement" value="1">
+                                <label for="basement">🏠 Sous-sol</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="hotwaterheating" name="hotwaterheating" value="1">
+                                <label for="hotwaterheating">🔥 Chauffage eau chaude</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="airconditioning" name="airconditioning" value="1" checked>
+                                <label for="airconditioning">❄️ Climatisation</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="prefarea" name="prefarea" value="1" checked>
+                                <label for="prefarea">⭐ Zone préférée</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Furnishing -->
+                    <div class="form-section">
+                        <h3>🪑 État du Mobilier</h3>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="unfurnished" name="furnishingstatus" value="0">
+                                <label for="unfurnished">Non meublé</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="semi-furnished" name="furnishingstatus" value="1" checked>
+                                <label for="semi-furnished">Semi-meublé</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="furnished" name="furnishingstatus" value="2">
+                                <label for="furnished">Meublé</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="button-section">
+                        <button type="submit" id="predictBtn" class="btn btn-primary">
+                            <span id="btnText">🔮 Prédire le Prix</span>
+                            <span id="btnSpinner" class="spinner" style="display: none;"></span>
+                        </button>
+                        <button type="button" id="resetBtn" class="btn btn-secondary">🔄 Réinitialiser</button>
+                        <button type="button" id="randomBtn" class="btn btn-accent">🎲 Valeurs Aléatoires</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="card results-section">
+                <h2>📊 Résultats de la Prédiction</h2>
+                <div id="resultsContainer" class="results-placeholder">
+                    <p>👆 Remplissez le formulaire et cliquez sur "Prédire le Prix" pour voir les résultats</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preset Houses -->
+        <div class="presets-section">
+            <h2>🏘️ Maisons Prédéfinies</h2>
+            <div class="presets-grid">
+                <div class="preset-card" data-preset="standard">
+                    <h3>🏠 Maison Familiale</h3>
+                    <p>4 chambres, 7,420 sq ft, zone préférée</p>
+                </div>
+                <div class="preset-card" data-preset="luxury">
+                    <h3>🏰 Villa de Luxe</h3>
+                    <p>5 chambres, 12,000 sq ft, tous équipements</p>
+                </div>
+                <div class="preset-card" data-preset="budget">
+                    <h3>🏡 Maison Économique</h3>
+                    <p>2 chambres, 3,500 sq ft, équipements de base</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Info -->
+        <div class="api-info">
+            <h2>🔗 Informations API</h2>
+            <div class="api-links">
+                <a href="/docs" target="_blank" class="api-link">📖 Documentation Swagger</a>
+                <a href="/redoc" target="_blank" class="api-link">📋 Documentation ReDoc</a>
+                <a href="/model/info" target="_blank" class="api-link">🤖 Infos du Modèle</a>
+                <a href="/health" target="_blank" class="api-link">💚 État de l'API</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>❌ Erreur</h3>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
